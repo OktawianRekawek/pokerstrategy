@@ -14,33 +14,50 @@
 
 header {
   height: 72px;
-  padding: 18px 0;
+  max-width: 992px;
+  margin: 0 auto;
 }
 
 .logo {
-  height: 36px;
+  height: 40px;
   float: left;
-  margin: 0 145px 0 9px;
+  margin: 16px 0 16px 9px;
 }
 
 .logo2 {
   display: none;
 }
 
+.login {
+  display: none;
+}
+
+.header {
+  float: right;
+  padding-top: 18px;
+  padding-right: 9px;
+}
+
 .number {
   height: 36px;
   width: 36px;
   border-radius: 50%;
-  background-color: orange;
-  margin-left: 5px;
+  background-color: #f9902a;
+  margin-right: 15px;
   float: left;
+  cursor: pointer;
+}
+
+.number:hover {
+  background-color: #e97607;
 }
 
 .number p {
   font-family: arial;
   text-align: center;
   line-height: 36px;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: bold;
   color: white;
 }
 
@@ -48,16 +65,22 @@ header {
   height: 36px;
   width: 36px;
   border-radius: 50%;
-  margin-left: 5px;
-  background-color: grey;
-
+  margin-right: 15px;
+  background-color: #e9e9e9;
   float: left;
+
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background-color: #d5d5d5;
 }
 
 .arrow p {
   text-align: center;
   line-height: 36px;
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: bold;
   color: white;
 }
 
@@ -65,13 +88,95 @@ header {
   height: 36px;
   width: 36px;
   float: left;
-  margin-left: 5px;
 }
 
 .hamburger p {
   text-align: center;
   line-height: 36px;
   font-size: 30px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logo2 {
+    display: block;
+    height: 40px;
+    float: left;
+    margin: 16px 0 16px 9px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .login {
+    display: block;
+    float: right;
+    background-color: #c5dce3;
+    height: 60px;
+    padding: 10px 10px 3px 5px;
+  }
+
+
+  .login .nick,
+  .login .pass {
+    width: 130px;
+    height: 25px;
+    background-color: rgb(250, 255, 189);
+    border: none;
+    padding-left: 30px;
+  }
+
+  .login .logbutton {
+    height: 23px;
+    padding: 2px 8px;
+    background-color: #5396ad;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-bottom: 2px solid #4a879c;
+    cursor: pointer;
+  }
+
+  .login .logbutton:hover {
+    background-color: #42788b;
+    border-bottom-color: #376373;
+  }
+
+  .login .fb-button {
+    font-size: 18px;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .login div {
+    margin-top: 5px;
+    margin-left: 5px;
+    font-family: arial, sans-serif;
+    font-size: 11px;
+  }
+
+
+  .login div a {
+    text-decoration: none;
+    padding: 0 6px;
+    border-right: 1px solid;
+    color: #1a7391;
+  }
+
+  .login div label {
+    padding-left: 6px;
+    color: #1a7391;
+    cursor: pointer;
+  }
+
+
 }
 
 
